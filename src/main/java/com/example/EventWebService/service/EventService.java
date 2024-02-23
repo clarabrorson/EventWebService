@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -26,7 +27,7 @@ public class EventService {
     public Event getEventByEventId(String eventId) {
         return repository.findById(eventId).get();
     }
-
+/*
     public Event updateEvent(Event event) {
         Event existingEvent = repository.findById(event.getEventId()).orElse(null);
         assert existingEvent != null;
@@ -43,4 +44,38 @@ public class EventService {
         repository.deleteById(taskId);
         return "Event removed" + taskId;
     }
+    */
+
+
+    public String deleteEvent(String eventId) {
+        Optional<Event> event = repository.findById(eventId);
+        if (event.isPresent()) {
+            repository.deleteById(eventId);
+            return "Event removed: " + eventId;
+        } else {
+            throw new RuntimeException("Event not found with id: " + eventId);
+        }
+    }
+
+    public Event updateEvent(Event event) {
+        String eventId = event.getEventId();
+        if (eventId == null || eventId.isEmpty()) {
+            throw new RuntimeException("Event id cannot be null or empty");
+        }
+        Optional<Event> existingEventOpt = repository.findById(eventId);
+        if (existingEventOpt.isPresent()) {
+            Event existingEvent = existingEventOpt.get();
+            existingEvent.setEventName(event.getEventName());
+            existingEvent.setEventDescription(event.getEventDescription());
+            existingEvent.setEventDate(event.getEventDate());
+            existingEvent.setLocation(event.getLocation());
+            existingEvent.setOrganizer(event.getOrganizer());
+            existingEvent.setCategory(event.getCategory());
+            return repository.save(existingEvent);
+        } else {
+            throw new RuntimeException("Event not found with id: " + eventId);
+        }
+    }
 }
+
+

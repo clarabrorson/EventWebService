@@ -22,5 +22,6 @@ public class Event {
 
 
     public void setEventId(String eventId) {
+        this.eventId = eventId;
     }
 }
