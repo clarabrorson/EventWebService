@@ -3,8 +3,6 @@ name: Java CI/CD with .
 on:
   push:
     branches:
-      - clara
-      - test
       - master
 
 jobs:
