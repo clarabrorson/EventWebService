@@ -4,6 +4,8 @@
 This is a Maven Spring Boot application that implements a Continuous Integration/Continuous Deployment (CI/CD) pipeline on AWS. The project will be hosted in AWS and will be accessible via a URL for a short period of time.
 The project also includes a build process on GitHub Actions for testing.
 
+Domain: [Event Service](http://event-service-mongodb-env.eba-hux36rjj.us-west-2.elasticbeanstalk.com:8080/events)
+
 ## Goal
 
 The goal of this project is to automate the build, test, and deployment process to streamline the development flow. The resulting web service application will be hosted on AWS for a short period of time and contains functionality to respond to various requests.
