@@ -66,4 +66,4 @@ The CI/CD process for this project involves pushing to the GitHub repository, tr
 
 This process ensures a streamlined development and deployment process, with every change to the code going through a series of automated tests and being automatically deployed to AWS.
 
-### For more information, please go to the [API Documentation](API_DOCUMENTATION.md).
+### For more information, please refer to the [API Documentation](API_DOCUMENTATION.md).
