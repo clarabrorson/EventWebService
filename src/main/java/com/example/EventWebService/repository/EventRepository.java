@@ -1,4 +1,7 @@
 package com.example.EventWebService.repository;
 
-public interface EventRepository {
+import com.example.EventWebService.entity.Event;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface EventRepository extends MongoRepository<Event, String> {
 }
