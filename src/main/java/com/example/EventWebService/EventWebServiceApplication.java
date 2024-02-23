@@ -14,6 +14,11 @@ public class EventWebServiceApplication {
 		SpringApplication.run(EventWebServiceApplication.class, args);
 	}
 
+	/**
+	 * This method is used to populate the database with some sample data when the application starts.
+	 * @param repository
+	 * @return
+	 */
 	@Bean
 	public CommandLineRunner run(EventRepository repository) {
 		return args -> {
