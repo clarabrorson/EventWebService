@@ -6,6 +6,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Event entity
+ * This class is used to create a document in the MongoDB database
+ * @Document(collection = "events") - specifies the collection name in the MongoDB database
+ * Lombok annotations are used to generate getters, setters, constructors, and toString methods
+ */
+
 @Document(collection = "events")
 @Data
 @AllArgsConstructor

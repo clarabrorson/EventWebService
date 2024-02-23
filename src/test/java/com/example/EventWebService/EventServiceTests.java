@@ -15,15 +15,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.times;
 
+/**
+ * This class contains the unit tests for the EventService class.
+ * It uses Mockito to mock the EventRepository and test the EventService methods.
+ * The tests are written to test the CRUD operations of the EventService class.
+ * By using Mockito, we can mock the EventRepository and test the EventService methods without actually interacting with the database.
+ */
 @ExtendWith(MockitoExtension.class)
 public class EventServiceTests {
 
     @Mock
     private EventRepository repository;
-
     @InjectMocks
     private EventService eventService;
-
 
     @Test
     void getEventById() {

@@ -15,6 +15,7 @@ The goal of this project is to automate the build, test, and deployment process 
 - Maven
 - AWS
 - GitHub Actions
+- MongoDB Atlas
 
 ## Features
 
@@ -49,7 +50,7 @@ The CI/CD process for this project involves pushing to the GitHub repository, tr
 
 2. **Trigger GitHub Actions**: The push to the repository triggers the GitHub Actions workflow defined in the `.github/workflows/maven.yml` file. This workflow sets up the environment, builds the project with Maven, and runs tests.
 
-![Github Actions](Actions.png)
+![Github Actions](GithubActions.png)
 
 3. **AWS Pipeline**: After the GitHub Actions workflow completes, the AWS pipeline is triggered. The pipeline consists of three stages:
 

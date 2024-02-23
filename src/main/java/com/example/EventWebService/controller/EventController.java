@@ -7,6 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This class is the controller for the Event entity. It is responsible for handling HTTP requests and returning responses.
+ * It is also responsible for mapping the requests to the appropriate service methods.
+ * The controller is annotated with @RestController to indicate that it is a controller class.
+ * The @RequestMapping annotation is used to map the requests to the appropriate methods.
+ * The @Autowired annotation is used to inject the EventService dependency into the controller.
+ */
 @RestController
 @RequestMapping("/events")
 public class EventController {
