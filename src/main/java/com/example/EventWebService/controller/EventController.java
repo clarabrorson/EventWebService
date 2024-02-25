@@ -36,12 +36,6 @@ public class EventController {
         return service.addEvent(event);
     }
 
-    /*
-    @PutMapping
-    public Event updateEvent(@RequestBody Event event) {
-        return service.updateEvent(event);
-    } */
-
     @PutMapping("/{eventId}")
     public Event updateEvent(@PathVariable String eventId, @RequestBody Event event) {
         return service.updateEvent(event);
