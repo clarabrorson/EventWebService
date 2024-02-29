@@ -6,6 +6,16 @@ The project also includes a build process on GitHub Actions for testing.
 
 Domain: [Event Service](http://event-service-mongodb-env.eba-hux36rjj.us-west-2.elasticbeanstalk.com:8080/events)
 
+UPDATE: The project is no longer hosted on AWS. The URL provided above is no longer active.
+To run the project locally, follow the instructions in the "How to Run the Project" section below.
+If the cloud-based database is no longer active, you can use a local MongoDB database to test the application.
+Navigate to the `application.properties` file and change the `spring.data.mongodb.uri` property to point to your local MongoDB database.
+Download and install MongoDB Compass to interact with the database.
+Create a new database called `events`.
+
+### Interact with the webservice trough my console application [Event Client](https://github.com/clarabrorson/EventClient) or by using Postman.
+
+
 ## Goal
 
 The goal of this project is to automate the build, test, and deployment process to streamline the development flow. The resulting web service application will be hosted on AWS for a short period of time and contains functionality to respond to various requests.
