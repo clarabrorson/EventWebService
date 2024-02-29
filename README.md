@@ -6,7 +6,7 @@ The project also includes a build process on GitHub Actions for testing.
 
 Domain: [Event Service](http://event-service-mongodb-env.eba-hux36rjj.us-west-2.elasticbeanstalk.com:8080/events)
 
-UPDATE: The project is no longer hosted on AWS. The URL provided above is no longer active.
+## UPDATE: The project is no longer hosted on AWS. The URL provided above is no longer active.
 To run the project locally, follow the instructions in the "How to Run the Project" section below.
 If the cloud-based database is no longer active, you can use a local MongoDB database to test the application.
 Navigate to the `application.properties` file and change the `spring.data.mongodb.uri` property to point to your local MongoDB database.
